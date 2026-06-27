@@ -62,7 +62,6 @@ infrastructure/
 modules/
 └── iam/
     ├── main.tf
-    ├── variable.tf
     ├── variables.tf
     └── provider.tf
 ```
@@ -145,6 +144,122 @@ Apply complete! Resources: 12 added, 0 changed, 0 destroyed.
 
 ## Author
 
-Akeem Olakunle Ogundipe
+A.O Ogundipe
 
-AWS Security & Infrastructure Engineer | DevSecOps & Cloud Security Specialist
+Security & Infrastructure Engineer | DevSecOps & Cloud Security Specialist
+
+
+
+############################################################
+# Story 2 Review  – IAM Governance
+############################################################
+## Overview
+
+This story provisions Identity and Access Management (IAM) resources required for a secure Healthcare Landing Zone.
+
+The solution uses reusable Terraform modules and follows the Principle of Least Privilege by assigning managed and customer-managed IAM policies to functional healthcare groups.
+
+---
+
+## IAM Groups
+
+The deployment creates:
+
+- Doctors
+- Nurses
+- Billing
+- Telehealth
+- Security Administrators
+
+---
+
+## Features
+
+- Modular IAM deployment
+- Customer-managed IAM policies
+- AWS managed policy attachments
+- Dynamic AWS Partition support
+- Environment-aware deployment
+- Consistent policy tagging
+
+---
+
+## Security Design
+
+Healthcare teams receive only the permissions required for their responsibilities.
+
+Examples include:
+
+Doctors
+
+- Read Electronic Health Records
+- Access approved healthcare storage
+
+Nurses
+
+- Read-only healthcare resources
+
+Billing
+
+- Read-only operational resources
+
+Security Administrators
+
+- AWS Security Audit permissions
+
+---
+
+## Variables
+
+| Variable | Description |
+|----------|-------------|
+| environment | Deployment environment |
+| project_name | Project name |
+
+---
+
+## Dynamic Configuration
+
+This implementation automatically discovers:
+
+- AWS Partition
+- AWS managed policy ARNs
+
+No AWS account IDs are hardcoded.
+
+---
+
+## Deployment
+
+```bash
+terraform fmt -recursive
+
+terraform validate
+
+terraform plan
+
+terraform apply
+```
+
+---
+
+## Design Improvements
+
+The implementation was refactored to:
+
+- Remove hardcoded AWS managed policy ARNs
+- Support multiple AWS partitions
+- Support reusable deployments
+- Improve Terraform module reusability
+
+Existing IAM group names were intentionally preserved to avoid unnecessary resource replacement.
+
+---
+
+## Technologies
+
+- Terraform
+- AWS IAM
+- Customer Managed Policies
+- Managed Policy Attachments
+- Least Privilege Access Control

@@ -225,6 +225,137 @@ This solution provides centralized audit logging for healthcare workloads, enabl
 
 ## Author
 
-**Akeem Olakunle Ogundipe**
+**A.O Ogundipe**
 
-AWS Security & Infrastructure Engineer | DevSecOps | Cloud Security | Terraform | AWS
+Security & Infrastructure Engineer | DevSecOps | Cloud Security | Terraform | AWS
+
+
+########################################################
+# Story 3 Reviewed – Audit Logging
+########################################################
+
+## Overview
+
+This story provisions centralized audit logging for the Healthcare Landing Zone using Amazon S3 and AWS CloudTrail.
+
+The implementation captures management events across the AWS environment and stores encrypted audit logs for compliance and security monitoring.
+
+---
+
+## Architecture
+
+The deployment provisions:
+
+- Audit S3 Bucket
+- Logging S3 Bucket
+- Bucket Encryption
+- Bucket Versioning
+- Bucket Logging
+- Bucket Policy
+- AWS CloudTrail
+
+---
+
+## Features
+
+- Dynamic AWS Account ID discovery
+- Dynamic AWS Region discovery
+- Dynamic AWS Partition support
+- Reusable bucket naming
+- Customer-defined environments
+- Server-side encryption
+- Bucket versioning
+- Server access logging
+
+---
+
+## Security
+
+The deployment includes:
+
+- SSE-KMS encryption
+- Bucket versioning
+- Public access block
+- CloudTrail bucket policy
+- CloudTrail log validation
+
+---
+
+## Variables
+
+| Variable | Description |
+|----------|-------------|
+| environment | Deployment environment |
+| project_name | Project name |
+| kms_key_alias | KMS Key Alias |
+
+---
+
+## Dynamic Resource Naming
+
+Bucket names are generated automatically using:
+
+```
+<environment>-<project>-audit-logs-<account-id>
+
+<environment>-<project>-audit-logging-<account-id>
+```
+
+Example:
+
+```
+dev-healthcare-audit-logs-597864876942
+```
+
+No AWS Account IDs are hardcoded.
+
+---
+
+## Deployment
+
+```bash
+terraform fmt -recursive
+
+terraform validate
+
+terraform plan
+
+terraform apply
+```
+
+---
+
+## Design Improvements
+
+This implementation removes hardcoded infrastructure values by using:
+
+- aws_caller_identity
+- aws_region
+- aws_partition
+- Terraform locals
+- Environment variables
+- Project variables
+
+The solution also removes legacy S3 ACL resources in favor of modern AWS S3 security best practices.
+
+---
+
+## Compliance
+
+Designed to support:
+
+- HIPAA
+- Security auditing
+- Operational monitoring
+- Infrastructure governance
+
+---
+
+## Technologies
+
+- Terraform
+- Amazon S3
+- AWS CloudTrail
+- AWS KMS
+- Infrastructure as Code
+- Cloud Security
