@@ -3,20 +3,32 @@ resource "aws_iam_group" "user_group" {
 }
 
 resource "aws_iam_group_policy_attachment" "user_group_managed_policy" {
-  for_each   = toset(var.managed_policies_to_attach)
+  for_each = toset(var.managed_policies_to_attach)
+
   group      = aws_iam_group.user_group.name
   policy_arn = each.value
 }
 
 resource "aws_iam_policy" "user_group_inline_policy" {
-  count       = var.inline_policy_to_attach == null ? 0 : 1
+
+  count = var.inline_policy_to_attach == null ? 0 : 1
+
   name        = var.policy_name
   description = var.policy_description
   policy      = var.inline_policy_to_attach
+
+  tags = {
+    Environment = var.environment
+    Project     = var.project_name
+    ManagedBy   = "Terraform"
+    Compliance  = "HIPAA"
+  }
 }
 
 resource "aws_iam_group_policy_attachment" "user_group_inline_policy" {
-  count      = var.inline_policy_to_attach == null ? 0 : 1
+
+  count = var.inline_policy_to_attach == null ? 0 : 1
+
   group      = aws_iam_group.user_group.name
   policy_arn = aws_iam_policy.user_group_inline_policy[0].arn
 }

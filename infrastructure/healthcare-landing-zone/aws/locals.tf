@@ -8,6 +8,10 @@ locals {
 
   resource_prefix = "${var.environment}-${var.project_name}"
 
+  readonly_policy_arn = "arn:${local.partition}:iam::aws:policy/ReadOnlyAccess"
+
+  security_audit_policy_arn = "arn:${local.partition}:iam::aws:policy/SecurityAudit"
+
   audit_bucket_name = "${local.resource_prefix}-audit-logs-${local.account_id}"
 
   logging_bucket_name = "${local.resource_prefix}-audit-logging-${local.account_id}"
