@@ -1,11 +1,11 @@
 module "s3" {
-    source = "../../../..//modules/s3"
+  source = "../../../..//modules/s3"
 
-    bucket_name = "project_union_s3_bucket"
-    kms_key_id = ""
-    logging_bucket_name = "project_union_s3_bucket_access_logs"
-    logging_kms_key_id = ""
-    s3_bucket_policy = data.aws_iam_policy_document.allow_to_receive_logs.json
+  bucket_name         = "project_union_s3_bucket"
+  kms_key_id          = ""
+  logging_bucket_name = "project_union_s3_bucket_access_logs"
+  logging_kms_key_id  = ""
+  s3_bucket_policy    = data.aws_iam_policy_document.allow_to_receive_logs.json
 }
 
 

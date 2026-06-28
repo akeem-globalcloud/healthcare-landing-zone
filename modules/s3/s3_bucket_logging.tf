@@ -10,6 +10,7 @@ resource "aws_s3_bucket_logging" "project_union_logging" {
 #This bucket logs files from the main bucket above
 resource "aws_s3_bucket" "project_union_s3_logging" {
   bucket = var.logging_bucket_name
+  force_destroy = true
 }
 
 resource "aws_s3_bucket_versioning" "project_union_s3_logging" {
@@ -39,7 +40,7 @@ resource "aws_s3_bucket_policy" "allow_to_receive_logs" {
 
 resource "aws_s3_bucket_public_access_block" "project_union_s3_logging" {
   bucket = aws_s3_bucket.project_union_s3_logging.id
-  
+
   block_public_acls       = true
   ignore_public_acls      = true
   block_public_policy     = true
