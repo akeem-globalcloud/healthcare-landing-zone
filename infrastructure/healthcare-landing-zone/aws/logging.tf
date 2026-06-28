@@ -21,8 +21,7 @@ module "audit_logs_bucket" {
     Statement = [
 
       {
-        Sid = "AWSCloudTrailWrite"
-
+        Sid    = "AWSCloudTrailWrite"
         Effect = "Allow"
 
         Principal = {
@@ -35,14 +34,14 @@ module "audit_logs_bucket" {
 
         Condition = {
           StringEquals = {
-            "s3:x-amz-acl" = "bucket-owner-full-control"
+            "s3:x-amz-acl"  = "bucket-owner-full-control"
+            "aws:SourceArn" = "arn:${local.partition}:cloudtrail:${local.region}:${local.account_id}:trail/${local.cloudtrail_name}"
           }
         }
       },
 
       {
-        Sid = "AWSCloudTrailAclCheck"
-
+        Sid    = "AWSCloudTrailAclCheck"
         Effect = "Allow"
 
         Principal = {
@@ -53,8 +52,11 @@ module "audit_logs_bucket" {
 
         Resource = "arn:aws:s3:::${local.audit_bucket_name}"
       }
+
     ]
+
   })
+
 }
 
 #############################################
@@ -65,7 +67,10 @@ module "cloudtrail" {
 
   source = "../../../modules/cloudtrail"
 
-  trail_name = local.cloudtrail_name
-
+  trail_name     = local.cloudtrail_name
   s3_bucket_name = local.audit_bucket_name
+
+  depends_on = [
+    module.audit_logs_bucket
+  ]
 }

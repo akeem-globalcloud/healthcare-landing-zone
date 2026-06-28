@@ -18,4 +18,14 @@ locals {
 
   cloudtrail_name = "${local.resource_prefix}-cloudtrail"
 
+  #############################################
+  # AWS Config
+  #############################################
+
+  config_bucket_name = "${local.resource_prefix}-config-${local.account_id}"
+
+  config_role_name = "${local.resource_prefix}-config-role"
+
+  config_recorder_name = "${local.resource_prefix}-config-recorder"
+
 }
