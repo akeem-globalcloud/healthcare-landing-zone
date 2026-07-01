@@ -8,11 +8,11 @@ resource "aws_config_config_rule" "s3_bucket_encryption" {
   }
 
   tags = {
-  Environment = var.environment
-  Project     = var.project_name
-  ManagedBy   = "Terraform"
-  Compliance  = "HIPAA"
-}
+    Environment = var.environment
+    Project     = var.project_name
+    ManagedBy   = "Terraform"
+    Compliance  = "HIPAA"
+  }
 
   depends_on = [
     aws_config_configuration_recorder.this
@@ -30,11 +30,11 @@ resource "aws_config_config_rule" "s3_public_read" {
   }
 
   tags = {
-  Environment = var.environment
-  Project     = var.project_name
-  ManagedBy   = "Terraform"
-  Compliance  = "HIPAA"
-}
+    Environment = var.environment
+    Project     = var.project_name
+    ManagedBy   = "Terraform"
+    Compliance  = "HIPAA"
+  }
 
   depends_on = [
     aws_config_configuration_recorder.this
@@ -52,11 +52,11 @@ resource "aws_config_config_rule" "cloudtrail_enabled" {
   }
 
   tags = {
-  Environment = var.environment
-  Project     = var.project_name
-  ManagedBy   = "Terraform"
-  Compliance  = "HIPAA"
-}
+    Environment = var.environment
+    Project     = var.project_name
+    ManagedBy   = "Terraform"
+    Compliance  = "HIPAA"
+  }
 
   depends_on = [
     aws_config_configuration_recorder.this
@@ -74,11 +74,11 @@ resource "aws_config_config_rule" "root_mfa" {
   }
 
   tags = {
-  Environment = var.environment
-  Project     = var.project_name
-  ManagedBy   = "Terraform"
-  Compliance  = "HIPAA"
-}
+    Environment = var.environment
+    Project     = var.project_name
+    ManagedBy   = "Terraform"
+    Compliance  = "HIPAA"
+  }
 
   depends_on = [
     aws_config_configuration_recorder.this
@@ -96,11 +96,11 @@ resource "aws_config_config_rule" "iam_password_policy" {
   }
 
   tags = {
-  Environment = var.environment
-  Project     = var.project_name
-  ManagedBy   = "Terraform"
-  Compliance  = "HIPAA"
-}
+    Environment = var.environment
+    Project     = var.project_name
+    ManagedBy   = "Terraform"
+    Compliance  = "HIPAA"
+  }
 
   depends_on = [
     aws_config_configuration_recorder.this

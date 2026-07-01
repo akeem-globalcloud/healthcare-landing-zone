@@ -41,3 +41,11 @@ output "guardduty_detector_id" {
 output "guardduty_status" {
   value = module.guardduty.guardduty_status
 }
+
+#############################################
+# Security Hub
+#############################################
+
+output "securityhub_account_id" {
+  value = module.securityhub.securityhub_account_id
+}
