@@ -49,3 +49,19 @@ output "guardduty_status" {
 output "securityhub_account_id" {
   value = module.securityhub.securityhub_account_id
 }
+
+#############################################
+# AWS KMS
+#############################################
+
+output "kms_key_id" {
+  value = module.kms.kms_key_id
+}
+
+output "kms_key_arn" {
+  value = module.kms.kms_key_arn
+}
+
+output "kms_alias" {
+  value = module.kms.kms_alias
+}
