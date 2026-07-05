@@ -1,8 +1,8 @@
 # Story 7 – AWS KMS Enterprise Encryption Strategy
 
-## User Story
+## Description
 
-**As a Cloud Security Engineer, I want to deploy AWS Key Management Service (KMS) using Infrastructure as Code so that sensitive healthcare data is encrypted using customer-managed encryption keys, supporting HIPAA security requirements while enabling centralized encryption management across the Healthcare Landing Zone.**
+**As a Cloud Security Engineer, deploy AWS Key Management Service (KMS) using Infrastructure as Code so that sensitive healthcare data is encrypted using customer-managed encryption keys, supporting HIPAA security requirements while enabling centralized encryption management across the Healthcare Landing Zone.**
 
 ---
 

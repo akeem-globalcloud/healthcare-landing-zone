@@ -75,3 +75,33 @@ variable "enable_eks_protection" {
   type    = bool
   default = false
 }
+
+#############################################
+# AWS Secrets Manager
+#############################################
+
+variable "db_username" {
+  description = "Healthcare database username"
+  type        = string
+}
+
+variable "db_password" {
+  description = "Healthcare database password"
+  type        = string
+  sensitive   = true
+}
+
+variable "db_name" {
+  description = "Healthcare database name"
+  type        = string
+}
+
+variable "db_engine" {
+  description = "Database engine"
+  type        = string
+}
+
+variable "db_host" {
+  description = "Database hostname"
+  type        = string
+}

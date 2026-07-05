@@ -65,3 +65,20 @@ output "kms_key_arn" {
 output "kms_alias" {
   value = module.kms.kms_alias
 }
+
+
+#############################################
+# AWS Secrets Manager
+#############################################
+
+output "secret_arn" {
+  value = module.secrets_manager.secret_arn
+}
+
+output "secret_name" {
+  value = module.secrets_manager.secret_name
+}
+
+output "secret_id" {
+  value = module.secrets_manager.secret_id
+}

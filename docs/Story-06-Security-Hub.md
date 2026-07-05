@@ -1,8 +1,8 @@
 # Story 6 – AWS Security Hub Integration
 
-## User Story
+## Description
 
-**As a Cloud Security Engineer, I want to deploy AWS Security Hub using Infrastructure as Code so that security findings, compliance controls, and security standards are centralized across the Healthcare Landing Zone, improving visibility into the organization's security posture while supporting HIPAA compliance objectives.**
+**As a Cloud Security Engineer, deploy AWS Security Hub using Infrastructure as Code so that security findings, compliance controls, and security standards are centralized across the Healthcare Landing Zone, improving visibility into the organization's security posture while supporting HIPAA compliance objectives.**
 
 ---
 

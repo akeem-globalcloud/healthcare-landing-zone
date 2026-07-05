@@ -23,3 +23,17 @@ enable_s3_protection      = true
 enable_runtime_monitoring = true
 enable_malware_protection = true
 enable_eks_protection     = false
+
+#############################################
+# AWS Secrets Manager
+#############################################
+
+db_username = "ehr_admin"
+
+db_password = "ChangeMe123!"
+
+db_name = "healthcare"
+
+db_engine = "postgres"
+
+db_host = "healthcare-db.internal"
