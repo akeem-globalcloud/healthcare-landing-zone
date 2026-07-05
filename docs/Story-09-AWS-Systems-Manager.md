@@ -2,7 +2,7 @@
 
 ## Description
 
-**As a Cloud Security Engineer, I want to deploy AWS Systems Manager (SSM) using Infrastructure as Code so that EC2 instances can be securely managed without SSH access, reducing the attack surface while supporting HIPAA-aligned administrative access controls across the Healthcare Landing Zone.**
+**As a Cloud Security Engineer, deploy AWS Systems Manager (SSM) using Infrastructure as Code so that EC2 instances can be securely managed without SSH access, reducing the attack surface while supporting HIPAA-aligned administrative access controls across the Healthcare Landing Zone.**
 
 ---
 

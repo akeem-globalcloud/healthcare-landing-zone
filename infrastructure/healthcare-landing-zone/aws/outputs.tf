@@ -98,3 +98,20 @@ output "ssm_instance_profile" {
 output "ssm_instance_profile_arn" {
   value = module.ssm.instance_profile_arn
 }
+
+
+#############################################
+# Amazon Inspector
+#############################################
+
+output "inspector_account" {
+
+  value = module.inspector.account_id
+
+}
+
+output "inspector_resource_types" {
+
+  value = module.inspector.resource_types
+
+}
