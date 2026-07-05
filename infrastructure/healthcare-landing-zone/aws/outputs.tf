@@ -82,3 +82,19 @@ output "secret_name" {
 output "secret_id" {
   value = module.secrets_manager.secret_id
 }
+
+#############################################
+# AWS Systems Manager
+#############################################
+
+output "ssm_role_name" {
+  value = module.ssm.iam_role_name
+}
+
+output "ssm_instance_profile" {
+  value = module.ssm.instance_profile_name
+}
+
+output "ssm_instance_profile_arn" {
+  value = module.ssm.instance_profile_arn
+}
