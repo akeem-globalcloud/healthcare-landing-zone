@@ -1,6 +1,6 @@
 #This bucket stores Project Union Files
 resource "aws_s3_bucket" "project_union_s3" {
-  bucket = var.bucket_name
+  bucket        = var.bucket_name
   force_destroy = true
 }
 

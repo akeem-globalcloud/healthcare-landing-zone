@@ -9,7 +9,7 @@ resource "aws_s3_bucket_logging" "project_union_logging" {
 
 #This bucket logs files from the main bucket above
 resource "aws_s3_bucket" "project_union_s3_logging" {
-  bucket = var.logging_bucket_name
+  bucket        = var.logging_bucket_name
   force_destroy = true
 }
 

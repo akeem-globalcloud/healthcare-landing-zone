@@ -9,7 +9,7 @@ data "aws_partition" "current" {}
 #############################################
 
 resource "aws_s3_bucket" "config_bucket" {
-  bucket = var.config_bucket_name
+  bucket        = var.config_bucket_name
   force_destroy = true
 
   tags = {
