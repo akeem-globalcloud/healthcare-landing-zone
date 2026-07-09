@@ -50,3 +50,11 @@ jobs:
 
       - name: Run tfsec
         run: tfsec --soft-fail .
+
+      - name: Install Checkov
+        run: |
+          python -m pip install --upgrade pip
+          pip install checkov
+
+      - name: Run Checkov
+        run: checkov -d . --soft-fail
