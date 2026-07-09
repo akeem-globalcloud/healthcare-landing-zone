@@ -50,7 +50,7 @@ Module Responsibilities:
 
 ```text
 infrastructure/
-└── healthcare-landing-zone/
+└── dev/
     └── aws/
         ├── main.tf
         ├── iam.tf

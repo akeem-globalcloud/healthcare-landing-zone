@@ -59,7 +59,7 @@ modules/
     └── provider.tf
 
 infrastructure/
-└── healthcare-landing-zone/
+└── dev/
     └── aws/
         ├── inspector.tf
         ├── outputs.tf

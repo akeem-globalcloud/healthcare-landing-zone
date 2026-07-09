@@ -69,7 +69,7 @@ modules/
 
 ```text
 infrastructure/
-└── healthcare-landing-zone/
+└── dev/
     └── aws/
         ├── logging.tf
         ├── provider.tf

@@ -58,7 +58,7 @@ modules/
     └── provider.tf
 
 infrastructure/
-└── healthcare-landing-zone/
+└── dev/
     └── aws/
         ├── secrets_manager.tf
         ├── outputs.tf

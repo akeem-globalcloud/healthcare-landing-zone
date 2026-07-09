@@ -60,7 +60,7 @@ modules/
     └── provider.tf
 
 infrastructure/
-└── healthcare-landing-zone/
+└── dev/
     └── aws/
         ├── kms.tf
         ├── outputs.tf

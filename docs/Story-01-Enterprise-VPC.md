@@ -74,7 +74,7 @@ modules/
 
 infrastructure/
 
-* healthcare-landing-zone/
+* dev/
 
   * aws/
 

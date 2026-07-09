@@ -51,7 +51,7 @@ AWS Managed Config Rules
 
 ```
 infrastructure/
-└── healthcare-landing-zone/
+└── dev/
     └── aws/
         ├── config.tf
         ├── locals.tf
