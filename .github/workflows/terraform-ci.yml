@@ -36,8 +36,8 @@ jobs:
         run: terraform validate
 
       - name: Terraform Plan
-        run: terraform plan \
-         -input=false \
-         -var-file="terraform.tfvars" \
-         -no-color
-         
+        run: |
+          terraform plan \
+            -input=false \
+            -var-file="terraform.tfvars" \
+            -no-color
