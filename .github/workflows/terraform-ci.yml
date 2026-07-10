@@ -49,7 +49,7 @@ jobs:
           curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
 
       - name: Run tfsec
-        run: tfsec --soft-fail .
+        run: tfsec --soft-fail --format json --out tfsec-report
 
       - name: Install Checkov
         run: |
@@ -57,4 +57,24 @@ jobs:
           pip install checkov
 
       - name: Run Checkov
-        run: checkov -d . --soft-fail
+        run: checkov -d . --soft-fail -o json > checkov-report.json
+
+      - name: Upload Security Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-reports
+          path: |
+            infrastructure/dev/aws/tfsec-report.json
+            infrastructure/dev/aws/checkov-report.json
+
+      - name: Pipeline Summary
+        run: |
+          {
+           echo "## DevSecOps Pipeline Summary"
+           echo ""
+           echo "- Terraform format: Passed"
+           echo "- Terraform validation: Passed"
+           echo "- TFLint: Passed"
+           echo "- tfsec: Completed"
+           echo "- Checkov: Completed"
+          } >> $GITHUB_STEP_SUMMARY
