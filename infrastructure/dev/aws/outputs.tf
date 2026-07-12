@@ -136,3 +136,11 @@ output "waf_web_acl_arn" {
 output "shield_status" {
   value = module.shield.shield_protection
 }
+
+#############################################
+# AWS Firewall Manager
+#############################################
+
+output "firewall_manager_status" {
+  value = module.firewall_manager.firewall_manager_status
+}
