@@ -110,7 +110,7 @@ terraform plan -target=module.shield
 Result:
 
 ```
-No changes.
+
 Infrastructure matches the configuration.
 ```
 
@@ -159,7 +159,7 @@ Future enterprise enhancements include:
 
 ---
 
-# Lessons Learned
+# Notes
 
 Key implementation observations:
 
