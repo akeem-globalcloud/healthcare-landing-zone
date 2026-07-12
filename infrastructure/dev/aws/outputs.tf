@@ -128,3 +128,11 @@ output "waf_web_acl_id" {
 output "waf_web_acl_arn" {
   value = module.waf.web_acl_arn
 }
+
+#############################################
+# AWS Shield
+#############################################
+
+output "shield_status" {
+  value = module.shield.shield_protection
+}
