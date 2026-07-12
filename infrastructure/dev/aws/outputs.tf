@@ -115,3 +115,16 @@ output "inspector_resource_types" {
   value = module.inspector.resource_types
 
 }
+
+
+#############################################
+# AWS WAF
+#############################################
+
+output "waf_web_acl_id" {
+  value = module.waf.web_acl_id
+}
+
+output "waf_web_acl_arn" {
+  value = module.waf.web_acl_arn
+}
