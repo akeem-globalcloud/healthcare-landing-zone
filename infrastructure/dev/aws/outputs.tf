@@ -144,3 +144,23 @@ output "shield_status" {
 output "firewall_manager_status" {
   value = module.firewall_manager.firewall_manager_status
 }
+
+#############################################
+# CloudWatch
+#############################################
+
+output "cloudwatch_log_group" {
+  value = module.cloudwatch.log_group_name
+}
+
+output "cloudwatch_dashboard" {
+  value = module.cloudwatch.dashboard_name
+}
+
+#############################################
+# CloudWatch Alarm
+#############################################
+
+output "cpu_alarm_name" {
+  value = module.cloudwatch.cpu_alarm_name
+}

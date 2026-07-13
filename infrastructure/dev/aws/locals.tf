@@ -28,4 +28,16 @@ locals {
 
   config_recorder_name = "${local.resource_prefix}-config-recorder"
 
+
+  #############################################
+  # Common Tags
+  #############################################
+
+  common_tags = {
+    Environment = var.environment
+    Project     = var.project_name
+    ManagedBy   = "Terraform"
+    Compliance  = "HIPAA"
+  }
+
 }
