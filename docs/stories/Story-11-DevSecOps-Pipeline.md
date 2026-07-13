@@ -222,7 +222,7 @@ The pipeline automatically checks for:
 
 ---
 
-# Lessons Learned
+# Notes
 
 During implementation, several CI/CD issues were identified and resolved:
 

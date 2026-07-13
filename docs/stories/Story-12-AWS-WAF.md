@@ -209,7 +209,7 @@ Planned enhancements include:
 
 ---
 
-# Lessons Learned
+# Notes
 
 During implementation the following Terraform improvements were incorporated:
 
