@@ -37,3 +37,9 @@ db_name = "healthcare"
 db_engine = "postgres"
 
 db_host = "healthcare-db.internal"
+
+#############################################
+# Amazon SNS
+#############################################
+
+alert_email = "nogundipe03@gmail.com"

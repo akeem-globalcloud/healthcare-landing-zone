@@ -11,7 +11,7 @@ module "cloudwatch" {
 
   cpu_alarm_name = "${local.resource_prefix}-cpu-high"
 
-  sns_topic_arn = ""
+  sns_topic_arn = module.sns.topic_arn
 
   tags = local.common_tags
 }

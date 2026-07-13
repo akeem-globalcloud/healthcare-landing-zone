@@ -105,3 +105,13 @@ variable "db_host" {
   description = "Database hostname"
   type        = string
 }
+
+
+#############################################
+# Amazon SNS
+#############################################
+
+variable "alert_email" {
+  description = "Email address for CloudWatch and security notifications"
+  type        = string
+}

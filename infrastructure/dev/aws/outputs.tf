@@ -164,3 +164,16 @@ output "cloudwatch_dashboard" {
 output "cpu_alarm_name" {
   value = module.cloudwatch.cpu_alarm_name
 }
+
+
+#############################################
+# Amazon SNS
+#############################################
+
+output "sns_topic_arn" {
+  value = module.sns.topic_arn
+}
+
+output "sns_topic_name" {
+  value = module.sns.topic_name
+}
