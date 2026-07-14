@@ -12,8 +12,9 @@ resource "aws_cloudwatch_event_rule" "security_events" {
   tags = var.tags
 }
 
-resource "aws_cloudwatch_event_target" "sns" {
+resource "aws_cloudwatch_event_target" "lambda" {
 
   rule = aws_cloudwatch_event_rule.security_events.name
-  arn  = var.sns_topic_arn
+
+  arn = var.lambda_function_arn
 }

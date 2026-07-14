@@ -185,3 +185,15 @@ output "sns_topic_name" {
 output "eventbridge_rule_name" {
   value = module.eventbridge.event_rule_name
 }
+
+#############################################
+# AWS Lambda
+#############################################
+
+output "lambda_function_name" {
+  value = module.lambda.lambda_function_name
+}
+
+output "lambda_function_arn" {
+  value = module.lambda.lambda_function_arn
+}
