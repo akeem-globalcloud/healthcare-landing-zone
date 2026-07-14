@@ -36,11 +36,7 @@ Benefits include:
 
 # Business Requirement
 
-As a Cloud Security Engineer,
-
-I want to implement an enterprise DevSecOps CI pipeline
-
-So that every Terraform change is automatically validated, analyzed, and security scanned before deployment.
+As a Cloud Security Engineer, implement an enterprise DevSecOps CI pipeline so that every Terraform change is automatically validated, analyzed, and security scanned before deployment.
 
 ---
 

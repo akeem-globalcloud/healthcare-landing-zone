@@ -2,7 +2,7 @@
 
 ## Description
 
-**As a Cloud Security Engineer, I want to deploy AWS Secrets Manager using Infrastructure as Code so that application credentials, API keys, database passwords, and other sensitive information are securely stored, encrypted using customer-managed AWS KMS keys, and centrally managed across the Healthcare Landing Zone.**
+**As a Cloud Security Engineer, deploy AWS Secrets Manager using Infrastructure as Code so that application credentials, API keys, database passwords, and other sensitive information are securely stored, encrypted using customer-managed AWS KMS keys, and centrally managed across the Healthcare Landing Zone.**
 
 ---
 

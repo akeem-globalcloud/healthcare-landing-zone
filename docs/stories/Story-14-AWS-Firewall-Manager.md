@@ -26,11 +26,7 @@ AWS Firewall Manager provides centralized governance that helps organizations:
 
 # Business Requirement
 
-As a Cloud Security Engineer,
-
-I want to integrate AWS Firewall Manager
-
-So that security controls can be centrally managed across multiple AWS accounts.
+As a Cloud Security Engineer, integrate AWS Firewall Manager so that security controls can be centrally managed across multiple AWS accounts.
 
 ---
 

@@ -26,11 +26,7 @@ Amazon SNS enables:
 
 # Business Requirement
 
-As a Cloud Security Engineer,
-
-I want to deploy Amazon SNS using Terraform
-
-So that CloudWatch alarms and future AWS services can deliver centralized notifications.
+As a Cloud Security Engineer, deploy Amazon SNS using Terraform so that CloudWatch alarms and future AWS services can deliver centralized notifications.
 
 ---
 

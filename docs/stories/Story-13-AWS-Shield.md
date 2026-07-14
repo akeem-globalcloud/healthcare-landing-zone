@@ -35,11 +35,7 @@ Benefits include:
 
 # Business Requirement
 
-As a Cloud Security Engineer,
-
-I want to integrate AWS Shield into the Healthcare Landing Zone
-
-So that public-facing workloads receive automatic DDoS protection while supporting enterprise cloud security best practices.
+As a Cloud Security Engineer, integrate AWS Shield into the Healthcare Landing Zone so that public-facing workloads receive automatic DDoS protection while supporting enterprise cloud security best practices.
 
 ---
 

@@ -177,3 +177,11 @@ output "sns_topic_arn" {
 output "sns_topic_name" {
   value = module.sns.topic_name
 }
+
+#############################################
+# Amazon EventBridge
+#############################################
+
+output "eventbridge_rule_name" {
+  value = module.eventbridge.event_rule_name
+}

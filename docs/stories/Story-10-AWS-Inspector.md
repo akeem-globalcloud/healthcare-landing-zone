@@ -2,7 +2,7 @@
 
 ## Description
 
-**As a Cloud Security Engineer, I want to deploy Amazon Inspector using Infrastructure as Code so that EC2 instances and workloads are continuously assessed for software vulnerabilities, unintended network exposure, and security best practices, supporting proactive risk management and HIPAA-aligned security monitoring across the Healthcare Landing Zone.**
+**As a Cloud Security Engineer, deploy Amazon Inspector using Infrastructure as Code so that EC2 instances and workloads are continuously assessed for software vulnerabilities, unintended network exposure, and security best practices, supporting proactive risk management and HIPAA-aligned security monitoring across the Healthcare Landing Zone.**
 
 ---
 

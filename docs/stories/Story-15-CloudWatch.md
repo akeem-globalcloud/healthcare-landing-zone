@@ -28,11 +28,7 @@ Amazon CloudWatch provides centralized monitoring that enables organizations to:
 
 # Business Requirement
 
-As a Cloud Security Engineer,
-
-I want to deploy Amazon CloudWatch using Terraform
-
-So that healthcare infrastructure can be continuously monitored, operational events detected, and alerts generated to improve system reliability and security.
+As a Cloud Security Engineer, deploy Amazon CloudWatch using Terraform so that healthcare infrastructure can be continuously monitored, operational events detected, and alerts generated to improve system reliability and security.
 
 ---
 
