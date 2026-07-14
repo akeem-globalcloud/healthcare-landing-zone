@@ -18,3 +18,14 @@ resource "aws_cloudwatch_event_target" "lambda" {
 
   arn = var.lambda_function_arn
 }
+
+#############################################
+# Security Remediation Target
+#############################################
+
+resource "aws_cloudwatch_event_target" "remediation" {
+
+  rule = aws_cloudwatch_event_rule.security_events.name
+
+  arn = var.remediation_lambda_arn
+}

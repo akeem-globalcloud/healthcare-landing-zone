@@ -197,3 +197,15 @@ output "lambda_function_name" {
 output "lambda_function_arn" {
   value = module.lambda.lambda_function_arn
 }
+
+#############################################
+# Security Remediation
+#############################################
+
+output "remediation_lambda_name" {
+  value = module.remediation.lambda_function_name
+}
+
+output "remediation_lambda_arn" {
+  value = module.remediation.lambda_function_arn
+}
