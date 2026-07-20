@@ -68,7 +68,11 @@ resource "aws_cloudwatch_metric_alarm" "cpu_high" {
 
   treat_missing_data = "notBreaching"
 
-  actions_enabled = false
+  actions_enabled = true
+
+alarm_actions = [
+  var.sns_topic_arn
+]
 
   tags = var.tags
 }

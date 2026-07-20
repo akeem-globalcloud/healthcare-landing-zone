@@ -31,3 +31,4 @@ variable "enable_malware_protection" {
   type        = bool
   default     = true
 }
+

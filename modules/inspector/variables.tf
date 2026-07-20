@@ -9,8 +9,9 @@ variable "project_name" {
 }
 
 variable "resource_types" {
-  description = "Amazon Inspector resource types"
-  type        = list(string)
+  description = "Inspector resource types"
+
+  type = list(string)
 
   default = [
     "EC2",

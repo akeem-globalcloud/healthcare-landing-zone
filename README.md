@@ -244,7 +244,7 @@ GitHub Actions automatically performs:
 
 ---
 
-# Learning Outcomes
+# Notes
 
 This project demonstrates practical experience with:
 

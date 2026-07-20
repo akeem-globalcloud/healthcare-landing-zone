@@ -26,11 +26,7 @@ Amazon EventBridge enables organizations to:
 
 # Business Requirement
 
-As a Cloud Security Engineer,
-
-I want to deploy Amazon EventBridge
-
-So that operational and security events can be automatically routed to downstream services.
+As a Cloud Security Engineer, deploy Amazon EventBridge so that operational and security events can be automatically routed to downstream services.
 
 ---
 
